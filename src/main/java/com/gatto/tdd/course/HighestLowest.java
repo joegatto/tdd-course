@@ -9,7 +9,7 @@ public class HighestLowest {
 
 	public void find(Cart carrinho) {
 		for (Product product : carrinho.getProducts()) {
-			if (lowest == null || product.getPrice() < lowest.getPrice()) {
+            if (lowest == null || product.getPrice() < lowest.getPrice()) {
 				lowest = product;
 			}
 			if (highest == null || product.getPrice() > highest.getPrice()) {

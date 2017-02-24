@@ -38,6 +38,12 @@ public class BankAccountTest {
         assertTrue(acc.withdraw(1));
         assertEquals(acc.getBalance(), 99);
     }
+    
+    @Test
+    public void testWithdrawWithAmountBiggerThan1000() {
+        assertFalse(acc.withdraw(1001));
+        assertEquals(acc.getBalance(), 100);
+    }
 
     @After
     public void tearDown() throws Exception {

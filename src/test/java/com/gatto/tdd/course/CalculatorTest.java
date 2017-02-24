@@ -12,6 +12,21 @@ public class CalculatorTest {
         int a = 5, b = 0;
         c.divide(a, b);
     }
+    
+    @Test
+    public void testNegativeDivision() {
+        Calculator c = new Calculator();
+        int a = -10, b = -2;
+        c.divide(a, b);
+    }
+
+    @Test
+    public void testDivision() {
+        Calculator c = new Calculator();
+        int a = 10, b = 2;
+        double result = c.divide(a, b);
+        assertEquals(5.0, result, 0.0001);
+    }
 
     @Test
     public void testSumTwoPositiveNumbers() {

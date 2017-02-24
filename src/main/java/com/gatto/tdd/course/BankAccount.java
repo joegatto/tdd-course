@@ -8,10 +8,6 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public BankAccount() {
-        this.balance = 0;
-    }
-
     public int getBalance() {
         return balance;
     }

@@ -21,10 +21,6 @@ public class Product {
         return description;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
     public double getPrice() {
         return price;
     }
