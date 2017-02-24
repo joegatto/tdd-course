@@ -18,6 +18,16 @@ public class CartTest {
     }
 
     @Test
+    public void testAddANewProduct() {
+        assertEquals(0, cart.getProducts().size());
+        Product product = new Product("Refrigerator", 1, 900.0);
+        cart.add(product);
+        assertEquals(1, cart.getProducts().size());
+        assertEquals("Refrigerator", cart.getProducts().get(0).getDescription());
+        assertEquals(product, cart.getProducts().get(0));
+    }
+
+    @Test
     public void testValueForAnEmptyCart() {
         assertEquals(0.0, cart.highPrice(), 0.0001);
     }

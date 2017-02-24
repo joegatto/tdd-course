@@ -7,16 +7,16 @@ public class HighestLowest {
 	private Product lowest;
 	private Product highest;
 
-	public void find(Cart carrinho) {
-		for (Product product : carrinho.getProducts()) {
+    public void find(Cart carrinho) {
+        for (Product product : carrinho.getProducts()) {
             if (lowest == null || product.getPrice() < lowest.getPrice()) {
-				lowest = product;
-			}
-			if (highest == null || product.getPrice() > highest.getPrice()) {
-				highest = product;
-			}
-		}
-	}
+                lowest = product;
+            }
+            if (highest == null || product.getPrice() > highest.getPrice()) {
+                highest = product;
+            }
+        }
+    }
 
 	public Product getLowest() {
 		return lowest;

@@ -11,7 +11,7 @@ public class SalaryCalculatorTest {
 
     @Test
     public void testCalculateSalaryForDeveloperEarningBelowLimit() {
-        Employee dev = new Employee("João", 1500.0, Role.DEVELOPER);
+        Employee dev = new Employee("Joao", 1500.0, Role.DEVELOPER);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(dev);
         assertEquals(dev.getSalary() * 0.9, salary, 0.00001);
@@ -19,7 +19,7 @@ public class SalaryCalculatorTest {
 
     @Test
     public void testCalculateSalaryForDeveloperEarningAboveLimit() {
-        Employee dev = new Employee("João", 4000.0, Role.DEVELOPER);
+        Employee dev = new Employee("Joao", 4000.0, Role.DEVELOPER);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(dev);
         assertEquals(dev.getSalary() * 0.8, salary, 0.00001);
@@ -27,7 +27,7 @@ public class SalaryCalculatorTest {
 
     @Test
     public void testCalculateSalaryForDBAEarningBelowLimit() {
-        Employee dba = new Employee("João", 500.0, Role.DBA);
+        Employee dba = new Employee("Joao", 500.0, Role.DBA);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(dba);
         assertEquals(dba.getSalary() * 0.85, salary, 0.00001);
@@ -35,7 +35,7 @@ public class SalaryCalculatorTest {
 
     @Test
     public void testCalculateSalaryForDBAEarningAboveLimit() {
-        Employee dba = new Employee("João", 3000.0, Role.DBA);
+        Employee dba = new Employee("Joao", 3000.0, Role.DBA);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(dba);
         assertEquals(dba.getSalary() * 0.75, salary, 0.00001);
@@ -43,7 +43,7 @@ public class SalaryCalculatorTest {
 
     @Test
     public void testCalculateSalaryForTesterEarningBelowLimit() {
-        Employee tester = new Employee("João", 500.0, Role.TESTER);
+        Employee tester = new Employee("Joao", 500.0, Role.TESTER);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(tester);
         assertEquals(tester.getSalary() * 0.95, salary, 0.00001);
@@ -51,7 +51,7 @@ public class SalaryCalculatorTest {
 
     @Test
     public void testCalculateSalaryForTesterEarningAboveLimit() {
-        Employee tester = new Employee("João", 3000.0, Role.TESTER);
+        Employee tester = new Employee("Joao", 3000.0, Role.TESTER);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(tester);
         assertEquals(tester.getSalary() * 0.85, salary, 0.00001);
