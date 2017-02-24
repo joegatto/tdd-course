@@ -46,7 +46,7 @@ public class SalaryCalculatorTest {
         Employee tester = new Employee("Joao", 500.0, Role.TESTER);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(tester);
-        assertEquals(tester.getSalary() * 0.95, salary, 0.00001);
+        assertEquals(tester.getSalary() * 0.85, salary, 0.00001);
     }
 
     @Test
@@ -54,14 +54,7 @@ public class SalaryCalculatorTest {
         Employee tester = new Employee("Joao", 3000.0, Role.TESTER);
         SalaryCalculator sc = new SalaryCalculator();
         double salary = sc.calculate(tester);
-        assertEquals(tester.getSalary() * 0.85, salary, 0.00001);
-    }
-
-    @Test
-    public void testCalculateSalaryForDefault() {
-        SalaryCalculator sc = new SalaryCalculator();
-        double salary = sc.calculate(null);
-        assertEquals(0, salary, 0.00001);
+        assertEquals(tester.getSalary() * 0.75, salary, 0.00001);
     }
 
 }
